@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cube\'Matrix</string>
+    <string name="game_title">Cube\'Matrix</string>
+    <string name="game_author">＠iBelieve</string>
+    <string name="game_tip">滑动屏幕翻转方块</string>
+    <string name="how_to_play">How to play?</string>
+    <string name="button_start">Start</string>
+    <string name="button_level">Level</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_select">Select</string>
+    <string name="button_restart">Restart</string>
+    <string name="button_vr">VR</string>
+	<string name="button_next">Next</string>
+</resources>

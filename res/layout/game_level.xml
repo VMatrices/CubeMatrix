@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 关卡选择页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_level"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000" >
+
+    <TextView
+        android:id="@+id/text_level"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#FFB3E5FC"
+        android:textSize="85sp" />
+
+    <Button
+        android:id="@+id/btn_level_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/text_level"
+        android:background="@null"
+        android:onClick="btnLevelPre"
+        android:text="&lt;"
+        android:textColor="#FFFFFFFF"
+        android:textSize="70sp" />
+
+    <Button
+        android:id="@+id/btn_level_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/text_level"
+        android:background="@null"
+        android:onClick="btnLevelNext"
+        android:text=">"
+        android:textColor="#FFFFFFFF"
+        android:textSize="70sp" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_style"
+        android:onClick="btnExit"
+        android:text="×"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_level"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/button_style"
+        android:onClick="btnLevelSelect"
+        android:text="Select"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_level_debug"
+        android:onClick="btnFree"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null" />
+
+</RelativeLayout>

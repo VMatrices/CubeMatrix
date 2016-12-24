@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 游戏信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button_vr"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#20FFFFFF"
+        android:onClick="btnVR"
+        android:text="@string/button_vr"
+        android:textColor="#C8FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/text_game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/game_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/WHITE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/game_tip"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#80FFFFFF" />
+
+    <TextView
+        android:id="@+id/text_now_level"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="0"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:onClick="btnLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:text="Level:"
+        android:textColor="@color/WHITE" 
+        android:background="@null"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000" >
+
+    
+     <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:text="@string/game_title"
+        android:textColor="#FFFFFFFF"
+        android:textSize="60sp" />
+
+
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/text_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_style"
+        android:onClick="btnStart"
+        android:text="@string/button_start"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_level"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/button_start"
+        android:layout_below="@+id/button_start"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/button_style"
+        android:onClick="btnLevel"
+        android:text="@string/button_level"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_help"
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:onClick="btnHelp"
+        android:text="@string/how_to_play"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12sp" />
+
+</RelativeLayout>

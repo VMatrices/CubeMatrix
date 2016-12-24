@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 游戏胜利界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_win"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000" >
+
+    <Button
+        android:id="@+id/button_level"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_style"
+        android:onClick="btnExit"
+        android:text="×"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/text_gameWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="GAME  WIN"
+            android:textColor="#FF00E676"
+            android:textSize="60sp" />
+        
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/text_gameWin"
+            android:layout_below="@+id/text_gameWin"
+            android:background="@drawable/button_style"
+            android:onClick="btnLevel"
+            android:text="Level"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/text_gameWin"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_style"
+            android:onClick="btnRestart"
+            android:text="Restart"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignRight="@+id/text_gameWin"
+            android:layout_below="@+id/text_gameWin"
+            android:background="@drawable/button_style"
+            android:onClick="btnNext"
+            android:text="Next"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
