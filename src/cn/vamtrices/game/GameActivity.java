@@ -14,14 +14,6 @@ import cn.vamtrices.tools.BlockMap;
 import cn.vamtrices.tools.GameLogic;
 import cn.vamtrices.tools.GameView;
 
-/*
- * Èí¼ş1503 ÑîÑÇÎ¬
- * ID:315202060346
- * 
- * ¸ĞĞ»´óÀĞÌá¹©µÄHandler£¬½â¾öÁË´óÎÊÌâ£¡
- * 
- */
-
 public class GameActivity extends Activity implements Runnable {
 
 	private final static int GAME_WIN_TIP = 0;
@@ -81,7 +73,7 @@ public class GameActivity extends Activity implements Runnable {
 		sharedPreferences = this.getSharedPreferences("xcalculator", MODE_PRIVATE);
 		editor = sharedPreferences.edit();
 
-		// ÓÎÏ·Âß¼­Ä£¿é³õÊ¼»¯
+		// æ¸¸æˆé€»è¾‘æ¨¡å—åˆå§‹åŒ–
 		state = new GameLogic(this, sharedPreferences.getInt(SP_PRE_LEVEL, 0));
 		gameView.linkData(state);
 		gameView.start();
@@ -92,10 +84,10 @@ public class GameActivity extends Activity implements Runnable {
 		th = new Thread(this);
 		th.start();
 
-		Toast.makeText(this, "ÄÚ²âÌåÑé°æ£¬µØÍ¼Êı¾İÉĞÎ´ÍêÉÆ¡£\r\nÕıÊ½°æ¼´½«ÉÏÏß,¾¡ÇéÆÚ´ı£¡", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "å†…æµ‹ä½“éªŒç‰ˆï¼Œåœ°å›¾æ•°æ®å°šæœªå®Œå–„ã€‚\r\næ­£å¼ç‰ˆå³å°†ä¸Šçº¿,å°½æƒ…æœŸå¾…ï¼", Toast.LENGTH_LONG).show();
 	}
 
-	// ¹Ø±ÕËùÓĞÒ³Ãæ
+	// å…³é—­æ‰€æœ‰é¡µé¢
 	private void closeAllPage() {
 		gameWinPage.setVisibility(View.GONE);
 		gameOverPage.setVisibility(View.GONE);
@@ -103,35 +95,35 @@ public class GameActivity extends Activity implements Runnable {
 		gameLevelPage.setVisibility(View.GONE);
 	}
 
-	// BUTTON: VRÄ£Ê½
+	// BUTTON: VRæ¨¡å¼
 	public void btnVR(View view) {
 		state.vrMode = !state.vrMode;
 		if (state.vrMode) {
-			Toast.makeText(this, "VRÄ£Ê½´¦ÓÚ¿ª·¢½×¶Î£¬ÔİÊ±Ö»Ö§³ÖÊÖ±ú²Ù×÷£¬Ğı×ªÍ·²¿¿É¿ØÖÆÊÓ½Ç¡£", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "VRæ¨¡å¼å¤„äºå¼€å‘é˜¶æ®µï¼Œæš‚æ—¶åªæ”¯æŒæ‰‹æŸ„æ“ä½œï¼Œæ—‹è½¬å¤´éƒ¨å¯æ§åˆ¶è§†è§’ã€‚", Toast.LENGTH_LONG).show();
 		}
 	}
 
-	// BUTTON: ÓÎÏ·¿ªÊ¼
+	// BUTTON: æ¸¸æˆå¼€å§‹
 	public void btnStart(View view) {
 		closeAllPage();
 		gameInfoPage.setVisibility(View.VISIBLE);
 		state.start();
 	}
 
-	// BUTTON: ÓÎÏ·½áÊø
+	// BUTTON: æ¸¸æˆç»“æŸ
 	public void btnExit(View view) {
 		closeAllPage();
 		runflag = false;
 	}
 
-	// BUTTON: ÖØĞÂ¿ªÊ¼
+	// BUTTON: é‡æ–°å¼€å§‹
 	public void btnRestart(View view) {
 		closeAllPage();
 		gameInfoPage.setVisibility(View.VISIBLE);
 		state.restart();
 	}
 
-	// BUTTON: ÏÂÒ»¹Ø
+	// BUTTON: ä¸‹ä¸€å…³
 	public void btnNext(View view) {
 		closeAllPage();
 		gameInfoPage.setVisibility(View.VISIBLE);
@@ -143,14 +135,14 @@ public class GameActivity extends Activity implements Runnable {
 		editor.commit();
 	}
 
-	// BUTTON: ¹Ø¿¨Ñ¡ÔñÒ³Ãæ
+	// BUTTON: å…³å¡é€‰æ‹©é¡µé¢
 	public void btnLevel(View view) {
 		closeAllPage();
 		text_levelpage.setText(state.nowLevelID + 1 + "/" + state.blockMap.size);
 		gameLevelPage.setVisibility(View.VISIBLE);
 	}
 
-	// BUTTON: Ñ¡Ôñµ±Ç°¹Ø¿¨
+	// BUTTON: é€‰æ‹©å½“å‰å…³å¡
 	public void btnLevelSelect(View view) {
 		closeAllPage();
 		gameInfoPage.setVisibility(View.VISIBLE);
@@ -161,8 +153,8 @@ public class GameActivity extends Activity implements Runnable {
 		editor.commit();
 	}
 
-	// ĞÂÔö¹¦ÄÜ£ºµã»÷Ä³Ò»¹ØÊ±¼ÓÔØÄÇÒ»¹ØµÄµØÍ¼
-	// BUTTON: Ñ¡Ôñ¹Ø¿¨+
+	// æ–°å¢åŠŸèƒ½ï¼šç‚¹å‡»æŸä¸€å…³æ—¶åŠ è½½é‚£ä¸€å…³çš„åœ°å›¾
+	// BUTTON: é€‰æ‹©å…³å¡+
 	public void btnLevelNext(View view) {
 		if (state.nowLevelID < sharedPreferences.getInt(SP_WIN_LEVEL, 0)||freeMode) {
 			if (state.nowLevelID + 1 >= state.blockMap.size) {
@@ -173,7 +165,7 @@ public class GameActivity extends Activity implements Runnable {
 		}
 	}
 
-	// BUTTON: Ñ¡Ôñ¹Ø¿¨-
+	// BUTTON: é€‰æ‹©å…³å¡-
 	public void btnLevelPre(View view) {
 		if (state.nowLevelID == 0) {
 			return;
@@ -182,14 +174,14 @@ public class GameActivity extends Activity implements Runnable {
 		text_levelpage.setText(state.nowLevelID + 1 + "/" + state.blockMap.size);
 	}
 
-	// BUTTON: ×ÔÓÉÄ£Ê½
+	// BUTTON: è‡ªç”±æ¨¡å¼
 	public void btnFree(View view) {
 		freeMode = !freeMode;
 	}
 
-	// BUTTON: ÓÎÏ·°ïÖú
+	// BUTTON: æ¸¸æˆå¸®åŠ©
 	public void btnHelp(View view) {
-		// TO-DO Î´Íê³É
+		// TO-DO æœªå®Œæˆ
 	}
 
 	@SuppressLint("HandlerLeak")
@@ -218,7 +210,7 @@ public class GameActivity extends Activity implements Runnable {
 		}
 	}
 
-	// ºóÌ¨UI´¦ÀíÏß³Ì
+	// åå°UIå¤„ç†çº¿ç¨‹
 	@Override
 	public void run() {
 		while (runflag) {
